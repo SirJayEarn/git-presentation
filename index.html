@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="charset=ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<p><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="160px" style="border: none; background: transparent; box-shadow: none;"></p>
+					<p>git</p>
+				</section>
+				<section>
+					<h2>Ziele dieser Pr&auml;sentation:</h2>
+					<ul>
+						<li class="fragment">Grundlagen vermitteln</li>
+						<li class="fragment">Helfen git schnell produktiv einsätzen zu können</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Was ist git?</h2>
+						<p class="fragment">Eine dezentralisierte Versionsverwaltung.</p>
+					</section>
+					<section>
+						<h2>Versionsverwaltung allgemein:</h2>
+						<ul>
+							<li>
+								lokal
+								<span data-fragment-index="1" class="fragment" style="color: orange">
+									SCCS, RCS
+								</span>
+							</li>
+							<li>
+								zentral
+								<span data-fragment-index="1" class="fragment" style="color: orange">
+									SVN, TFS, Perforce...
+								</span>
+							</li>
+							<li>
+								verteilt / dezentral
+								<span data-fragment-index="1" class="fragment" style="color: orange">
+									git, Mercurial...
+								</span>
+							</li>
+						</ul>
+
+						<aside class="notes">
+							Wozu Versionsverwaltung wichtig ist sollte klar sein. Allgemein Versionsverwaltung besonders für Textdateien geeignet.
+							<ul>
+								<li>lokal: Änderungsindex in der Datei selbst</li>
+								<li>zentral: Ein Repository auf einem Server</li>
+								<li>dezentral: Ein Repository pro Entwickler</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h2>Das Problem</h2>
+						<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia2.png">
+						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+					</section>
+					<section>
+						<h2>Lösungsansätze</h2>
+						<ul>
+							<li>Lock - Modify - Unlock</li>
+							<li>Copy - Modify - Merge</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Lock - Modify - Unlock</h2>
+						<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia3.png">
+						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+					</section>
+					<section>
+						<h2>Copy - Modify - Merge</h2>
+						<div>
+							<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia4.png" style="width: 38.7%">
+							<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia5.png">
+						</div>
+						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+					</section>
+					<section>
+						<h2>Relevanz</h2>
+						<p data-fragment-index="1" class="fragment strike shrink">lokal</p>
+						<p data-fragment-index="1">zentral</p>
+						<p data-fragment-index="1" class="fragment highlight-green grow">verteilt / dezentral</p>
+
+						<aside class="notes">
+							<ul>
+								<li>lokal: nur an einem Arbeitsplatz möglich</li>
+								<li>zentral: file locking kann bei der Zusammenarbeit hinderlich sein</li>
+								<li>dezentral: gut für zeilenbasierte Textdateien - schwierig bei binären Datein (Grafiken etc.)</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h2>Entstehungsgeschichte Git</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Wieso git?</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Git vs. TFS</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Git Grundlagen</h2>
+					</section>
+					<section>
+						<h2>Grundlegende Begriffe</h2>
+					</section>
+					<section>
+						<h2>Snapshots - wie handhabt git &Auml;nderungen</h2>
+					</section>
+					<section>
+						<h2>Grundlegender Workflow</h2>
+					</section>
+					<section>
+						<h2>LFS - large file system</h2>
+					</section>
+					<section>
+						<h2>Hosted git - GitHub & Bitbucket</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Branching - Das Git-Flow Modell</h2>
+					</section>
+					<section>
+						<h2></h2>
+						<aside class="notes">
+							Screenshot zum modell
+						</aside>
+					</section>
+					<section>
+						<h2>Branches</h2>
+						<p><strong>Master</strong></p>
+						<p><strong>Develop</strong></p>
+						<p><strong>Feature</strong></p>
+						<p><small>Release</small></p>
+						<p><small>Hotfix</small></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Hands on</h2>
+						<p>manuell - über Terminal</p>
+					</section>
+					<section>
+						<section>
+							<h2>Vorhandenes Repo auschecken</h2>
+						</section>
+						<section>
+							<h2>Clonen</h2>
+							<pre><code class="bash" style="word-warp: break-word;">git clone https://Yearn@bitbucket.org/Yearn/git-presentation.git</code></pre>
+						</section>
+					</section>
+
+					<section>
+						<section>
+							<h2>Eigenes Repo aufsetzen</h2>
+						</section>
+						<section>
+							<h2>Initialisieren</h2>
+							<pre><code class="bash" style="word-warp: break-word;">git init</code></pre>
+						</section>
+						<section>
+							<h2>Globale Konfiguration</h2>
+							<pre><code class="bash" style="word-warp: break-word;">
+git config --global user.email "meine@email.de"
+git config --global user.name "Mein Name"
+							</code></pre>
+							<aside class="notes">
+								Muss man mit dieser email bei bitbucket oder github registriert sein?
+							</aside>
+						</section>
+						<section>
+							<h2>Push</h2>
+							<pre><code class="bash" style="word-warp: break-word;">git push -u origin master</code></pre>
+						</section>
+					</section>
+					<section>
+						<section>
+							<h2>Status</h2>
+							<pre><code class="bash" style="word-warp: break-word;">git status</code></pre>
+						</section>
+					</section>
+					<section>
+						<section>
+							<h2>Add</h2>
+							<pre><code class="bash" style="word-warp: break-word;">git add .</code></pre>
+						</section>
+					</section>
+					<section>
+						<section>
+							<h2>Commit</h2>
+							<pre><code class="bash" style="word-warp: break-word;">git commit -m "commit message"</code></pre>
+						</section>
+					</section>
+					<section>
+						<section>
+							<h2>Branch commands</h2>
+							<pre><code class="bash" style="word-warp: break-word;">
+git checkout <branch>
+git checkout -b <branch>
+							</code></pre>
+						</section>
+					</section>
+					<section>
+						<h2>Zusammenfassung - wichtigste commands</h2>
+						<pre><code class="bash" style="word-warp: break-word;">
+git init
+git pull
+git checkout [-b]
+git status
+git add .
+git push [-u]
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Mergen</h2>
+						<p>3-way merge</p>
+						<p class="fragment">Konflikte beheben...</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Visuelle Git Clients</h2>
+						<p class="fragment">SourceTree</p>
+						<p class="fragment">GitKraken</p>
+						<aside class="notes">
+							Icons einfügen
+						</aside>
+					</section>
+					<section>
+						<h2>SourceTree</h2>
+						<aside class="notes">
+							Demo
+						</aside>
+					</section>
+					<section>
+						<h2>Git Kraken</h2>
+						<aside class="notes">
+							Demo
+						</aside>
+					</section>
+				</section>
+
+
+				<section>
+					<h2>Zugriff</h2>
+					<p>ssh</p>
+					<p>https</p>
+				</section>
+				<section>
+					<h2>Quellen</h2>
+					<p>
+						<a href="http://dme.rwth-aachen.de/en/system/files/file_upload/course/12/proseminar-methoden-und-werkzeuge/versionsverwaltung.pdf">http://dme.rwth-aachen.de/en/system/files/file_upload/course/12/proseminar-methoden-und-werkzeuge/versionsverwaltung.pdf</a>
+					</p>
+					<p>
+						<a href="https://wr.informatik.uni-hamburg.de/_media/teaching/wintersemester_2010_2011/siw-2010-wiesner-versionsverwaltung-druckversion.pdf">https://wr.informatik.uni-hamburg.de/_media/teaching/wintersemester_2010_2011/siw-2010-wiesner-versionsverwaltung-druckversion.pdf</a>
+					</p>
+					<p>
+						<a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide',
+				mouseWheel: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
