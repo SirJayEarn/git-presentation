@@ -31,8 +31,8 @@
 				<section>
 					<h2>Ziele dieser Pr&auml;sentation:</h2>
 					<ul>
-						<li class="fragment">Grundlagen vermitteln</li>
-						<li class="fragment">Helfen git schnell produktiv einsätzen zu können</li>
+						<li data-fragment-index="1" class="fragment">Grundlagen vermitteln</li>
+						<li data-fragment-index="1" class="fragment">Helfen git schnell produktiv einsätzen zu können</li>
 					</ul>
 				</section>
 				<section>
@@ -43,7 +43,7 @@
 					<section>
 						<h2>Versionsverwaltung allgemein:</h2>
 						<ul>
-							<li>
+							<li data-fragment-index="2" class="fragment strike">
 								lokal
 								<span data-fragment-index="1" class="fragment" style="color: orange">
 									SCCS, RCS
@@ -52,7 +52,7 @@
 							<li>
 								zentral
 								<span data-fragment-index="1" class="fragment" style="color: orange">
-									SVN, TFS, Perforce...
+									SVN, TFVC, Perforce...
 								</span>
 							</li>
 							<li>
@@ -66,9 +66,28 @@
 						<aside class="notes">
 							Wozu Versionsverwaltung wichtig ist sollte klar sein. Allgemein Versionsverwaltung besonders für Textdateien geeignet.
 							<ul>
-								<li>lokal: Änderungsindex in der Datei selbst</li>
-								<li>zentral: Ein Repository auf einem Server</li>
-								<li>dezentral: Ein Repository pro Entwickler</li>
+								<li>
+									lokal: Änderungsindex in der Datei selbst
+								</li>
+								<li>
+									zentral: Ein Repository auf einem Server
+								</li>
+								<li>
+									dezentral: Ein Repository pro Entwickler
+								</li>
+							</ul>
+
+							Vor- und Nachteile [CLICK] 
+							<ul>
+								<li>
+									lokal: nur an einem Arbeitsplatz möglich. Dadurch irrelevant für Softwareentwicklung im Team
+								</li>
+								<li>
+									zentral: Wenn das Hauprepository zerstört wurde schwierig wiederherzustellen (die history kann im schlimmsten fall komplett verloren gehen)
+								</li>
+								<li>
+									dezentral: Wenn das Hauprepository zerstört wurde kann es einfach wiederhergestellt werden
+								</li>
 							</ul>
 						</aside>
 					</section>
@@ -98,31 +117,79 @@
 						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
 					</section>
 					<section>
-						<h2>Relevanz</h2>
-						<p data-fragment-index="1" class="fragment strike shrink">lokal</p>
-						<p data-fragment-index="1">zentral</p>
-						<p data-fragment-index="1" class="fragment highlight-green grow">verteilt / dezentral</p>
+						<h2>Vor- und Nachteile</h2>
+						<p data-fragment-index="1" class="fragment strike shrink">Lock - Modify - Unlock</p>
+						<p data-fragment-index="1" class="fragment highlight-green grow">Copy - Modify - Merge</p>
 
 						<aside class="notes">
 							<ul>
-								<li>lokal: nur an einem Arbeitsplatz möglich</li>
-								<li>zentral: file locking kann bei der Zusammenarbeit hinderlich sein</li>
-								<li>dezentral: gut für zeilenbasierte Textdateien - schwierig bei binären Datein (Grafiken etc.)</li>
+								<li>lock-modify-unlock: file locking kann bei der Zusammenarbeit hinderlich sein</li>
+								<li>copy-modify-merge: gut für zeilenbasierte Textdateien - schwierig bei binären Datein (Grafiken etc.)</li>
 							</ul>
 						</aside>
 					</section>
 					<section>
+						<h2>Zusammenfassung</h2>
+						<ul>
+							<li>TFVC: zentral, Lock - Modify - Unlock oder Copy - Modify - Merge</li>
+							<li>GIT: dezentral, Copy - Modify - Merge</li>
+						</ul>
+						<aside class="notes">
+							<p>TFS hat ein repository, Lock - Modify - Unlock kann optional eingeschaltet werden - offline arbeiten schwierig</p>
+							<p>GIT hat ein repository, das komplette Repository muss gepullt werden (lokale Kopie) - offline arbeiten.</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
 						<h2>Entstehungsgeschichte Git</h2>
 					</section>
-				</section>
-				<section>
 					<section>
-						<h2>Wieso git?</h2>
+						<h2>Entwicklung des Linux Kernels</h2>
+						<ul>
+							<li>zunächst "manuelle" Versionsverwaltung</li>
+							<li>Ab 2002 wurde Bitkeeper verwendet</li>
+							<li>2005 Lizenzänderungen von Bitkeeper</li>
+							<li>Linus Torvalds begann mit der Entwicklung eines eigenen Versionsverwaltungssystems</li>
+						</ul>
+						<aside class="notes">
+							<p>Linux Open Source - Bitkeeper kommerziell</p>
+						</aside>
+					</section>
+					<section>
+						<h2>Fokus</h2>
+						<ul>
+							<li>Geschwindigkeit</li>
+							<li>Einfaches Design</li>
+							<li>Gute Unterstützung von nicht-linearer Entwicklung (tausende paralleler Branches, d.h. verschiedener Verzweigungen der Versionen)</li>
+							<li>Vollständig verteilt</li>
+							<li>Fähig, große Projekte wie den Linux Kernel effektiv zu verwalten (Geschwindigkeit und Datenumfang)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Namensherkunft</h2>
+						<p>git engl. für Schwachkopf</p>
+						<blockquote class="fragment" cite="https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc">
+							&ldquo;I’m an egotistical bastard, and I name all my projects after myself. First ‘Linux’, now ‘Git’.&rdquo;<br/>
+							- Linus Torvalds
+						</blockquote>
 					</section>
 				</section>
+
 				<section>
 					<section>
-						<h2>Git vs. TFS</h2>
+						<h2>Git vs. TFVC</h2>
+						<blockquote cite="https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc">
+							&ldquo;Git is the default version control provider for new projects. You should use Git for version control in your projects unless you have a specific need for centralized version control features in TFVC.
+
+							You can use TFVC repos with Git in the same Team Project so it's easy to add TFVC later if you need centralized version control.&rdquo;
+						</blockquote>
+						<small><a href="https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc">https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc</a></small>
+					</section>
+					<section>
+						<h2>Git vs. TFVC</h2>
+						<p>Sehr ähnliche Features</p>
 					</section>
 				</section>
 				<section>
@@ -241,6 +308,10 @@ git add .
 git push [-u]
 						</code></pre>
 					</section>
+					<section>
+						<h2>Cheat Sheet</h2>
+						<p><a href="https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf">https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf</a></p>
+					</section>
 				</section>
 
 				<section>
@@ -248,6 +319,9 @@ git push [-u]
 						<h2>Mergen</h2>
 						<p>3-way merge</p>
 						<p class="fragment">Konflikte beheben...</p>
+					</section>
+					<section>
+						<h2>Merge-Conflict</h2>
 					</section>
 				</section>
 
@@ -271,6 +345,11 @@ git push [-u]
 						<aside class="notes">
 							Demo
 						</aside>
+					</section>
+					<section data-background-video-loop="true" data-background-video="./media/gitkraken-merge.mp4" data-background-color="#000000">
+						<!--<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 4px;">
+							<a href="https://www.youtube.com/watch?v=R1iWJNyRpQE">https://www.youtube.com/watch?v=R1iWJNyRpQE</a>
+						</div>-->
 					</section>
 				</section>
 
