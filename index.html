@@ -4,7 +4,7 @@
 		<meta http-equiv="content-type" content="text/html" charset="charset=ISO-8859-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>git Einführung</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/moon.css">
@@ -34,6 +34,10 @@
 						<li data-fragment-index="1" class="fragment">Grundlagen vermitteln</li>
 						<li data-fragment-index="1" class="fragment">Helfen git schnell produktiv einsätzen zu können</li>
 					</ul>
+					<aside class="notes">
+						CLICK
+						<p>auch vergleich zu tfvc</p>
+					</aside>
 				</section>
 				<section>
 					<section>
@@ -94,7 +98,7 @@
 					<section>
 						<h2>Das Problem</h2>
 						<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia2.png">
-						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
 					</section>
 					<section>
 						<h2>Lösungsansätze</h2>
@@ -106,7 +110,7 @@
 					<section>
 						<h2>Lock - Modify - Unlock</h2>
 						<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia3.png">
-						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
 					</section>
 					<section>
 						<h2>Copy - Modify - Merge</h2>
@@ -114,7 +118,7 @@
 							<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia4.png" style="width: 38.7%">
 							<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia5.png">
 						</div>
-						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
 					</section>
 					<section>
 						<h2>Vor- und Nachteile</h2>
@@ -185,25 +189,71 @@
 
 							You can use TFVC repos with Git in the same Team Project so it's easy to add TFVC later if you need centralized version control.&rdquo;
 						</blockquote>
-						<small><a href="https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc">https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc</a></small>
+						<small><a href="https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc" target="_blank">https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc</a></small>
 					</section>
 					<section>
 						<h2>Git vs. TFVC</h2>
 						<p>Sehr ähnliche Features</p>
 					</section>
+					<section>
+						<h2>Hauptvorteile TFVC</h2>
+						<p>Besser um <strong>sehr viele</strong> oder <strong>sehr große</strong> Dateien zu verwalten</p>
+						<p>Einfacher Einstieg</p>
+					</section>
+					<section>
+						<h2>Hauptvorteile git</h2>
+						<ul>
+							<li>vollständig offlinefähig (lokale History)</li>
+							<li>"automatische Backups"</li>
+							<li>kostenlos und open source</li>
+							<li><strong>Branching</strong></li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>auch TFVC teilweise offlinefähig, aber dann keine branches etc.</li>
+								<li>nicht an repository gebunden</li>
+								<li>staging area - partielle commits</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h2>Fazit</h2>
+						<p>git bietet alle Funktionalitäten von TFVC und darüber hinaus noch weitere</p>
+					</section>
 				</section>
 				<section>
-					<section>
-						<h2>Git Grundlagen</h2>
+					<section data-background="#fff">
+						<h2 style="color: #000">Git Grundlagen</h2>
+						<img src="https://git-scm.com/images/about/index1@2x.png" style="background-color: #fff; border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/images/about/index1@2x.png">https://git-scm.com</a></small>
 					</section>
 					<section>
-						<h2>Grundlegende Begriffe</h2>
+						<h2>Snapshots statt Differences</h2>
+						<div>
+							<img src="https://git-scm.com/book/en/v2/images/deltas.png" style="background-color: #fff; border: none; box-shadow: none; width: 60%">
+							<img src="https://git-scm.com/book/en/v2/images/snapshots.png" style="background-color: #fff; border: none; box-shadow: none; width: 60%">
+						</div>
+						<small>Quelle: <a href="https://git-scm.com">https://git-scm.com</a></small>
+						<aside class="notes">
+							<p>Andere Versionssysteme handhaben Änderungen als Liste von Dateibasierten Änderungen.</p>
+							<p>Git funktioniert wie ein mini-Dateisystem: Speichert den Zustand aller Dateien. Falls keine Änderungen referenz zur Datei</p>
+						</aside>
 					</section>
 					<section>
-						<h2>Snapshots - wie handhabt git &Auml;nderungen</h2>
+						<h2>Die 3 Zustände</h2>
+						<img src="https://git-scm.com/book/en/v2/images/areas.png">
+						<small>Quelle: <a href="https://git-scm.com">https://git-scm.com</a></small>
+					</section>
+					<section>
+						<h2>Datei Lebenszyklus</h2>
+						<img src="https://git-scm.com/book/en/v2/images/lifecycle.png">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/images/lifecycle.png">https://git-scm.com</a></small>
 					</section>
 					<section>
 						<h2>Grundlegender Workflow</h2>
+						<p>Subversion style</p>
+						<img src="https://git-scm.com/images/about/workflow-a@2x.png" style="border: none;">
+						<small>Quelle: <a href="https://git-scm.com/images/about/workflow-a@2x.png">https://git-scm.com/images/about/workflow-a@2x.png</a></small>
 					</section>
 					<section>
 						<h2>LFS - large file system</h2>
@@ -215,6 +265,8 @@
 				<section>
 					<section>
 						<h2>Branching - Das Git-Flow Modell</h2>
+						<img src="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png" style="border: none;">
+						<small>Quelle: <a href="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png">https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png</a></small>
 					</section>
 					<section>
 						<h2></h2>
@@ -238,6 +290,20 @@
 						<p>manuell - über Terminal</p>
 					</section>
 					<section>
+						<h2>Installieren</h2>
+						<a href="http://git-scm.com/download/win" target="_blank">http://git-scm.com/download/win</a>
+					</section>
+					<section>
+						<h2>konfigurieren</h2>
+						<pre><code class="bash" style="word-warp: break-word;">
+git config --global user.email "meine@email.de"
+git config --global user.name "Mein Name"
+						</code></pre>
+						<aside class="notes">
+							Muss man mit dieser email bei bitbucket oder github registriert sein?
+						</aside>
+					</section>
+					<section>
 						<section>
 							<h2>Vorhandenes Repo auschecken</h2>
 						</section>
@@ -256,13 +322,10 @@
 							<pre><code class="bash" style="word-warp: break-word;">git init</code></pre>
 						</section>
 						<section>
-							<h2>Globale Konfiguration</h2>
-							<pre><code class="bash" style="word-warp: break-word;">
-git config --global user.email "meine@email.de"
-git config --global user.name "Mein Name"
-							</code></pre>
+							<h2>konfigurieren (lokal)</h2>
+							<p>Globale Konfiguration wird übernommen, wenn keine lokale Konfiguration vorhanden</p>
 							<aside class="notes">
-								Muss man mit dieser email bei bitbucket oder github registriert sein?
+								optionaler schritt, aber globale konfiguration muss vorhanden sein
 							</aside>
 						</section>
 						<section>
@@ -300,6 +363,7 @@ git checkout -b <branch>
 					<section>
 						<h2>Zusammenfassung - wichtigste commands</h2>
 						<pre><code class="bash" style="word-warp: break-word;">
+git help
 git init
 git pull
 git checkout [-b]
@@ -310,7 +374,7 @@ git push [-u]
 					</section>
 					<section>
 						<h2>Cheat Sheet</h2>
-						<p><a href="https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf">https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf</a></p>
+						<p><a href="https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf" target="_blank">https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf</a></p>
 					</section>
 				</section>
 
@@ -322,6 +386,14 @@ git push [-u]
 					</section>
 					<section>
 						<h2>Merge-Conflict</h2>
+						<pre><code class="bash" style="word-warp: break-word;">
+<<<<<<< Head
+
+Here ist the original change.
+=======
+Here is the modified change.
+>>>>>>> abdd36cfd497901fb19953caa9a6eef0ce3d3f66 
+						</code></pre>
 					</section>
 				</section>
 
@@ -362,13 +434,13 @@ git push [-u]
 				<section>
 					<h2>Quellen</h2>
 					<p>
-						<a href="http://dme.rwth-aachen.de/en/system/files/file_upload/course/12/proseminar-methoden-und-werkzeuge/versionsverwaltung.pdf">http://dme.rwth-aachen.de/en/system/files/file_upload/course/12/proseminar-methoden-und-werkzeuge/versionsverwaltung.pdf</a>
+						<a href="http://dme.rwth-aachen.de/en/system/files/file_upload/course/12/proseminar-methoden-und-werkzeuge/versionsverwaltung.pdf" target="_blank">http://dme.rwth-aachen.de/en/system/files/file_upload/course/12/proseminar-methoden-und-werkzeuge/versionsverwaltung.pdf</a>
 					</p>
 					<p>
-						<a href="https://wr.informatik.uni-hamburg.de/_media/teaching/wintersemester_2010_2011/siw-2010-wiesner-versionsverwaltung-druckversion.pdf">https://wr.informatik.uni-hamburg.de/_media/teaching/wintersemester_2010_2011/siw-2010-wiesner-versionsverwaltung-druckversion.pdf</a>
+						<a href="https://wr.informatik.uni-hamburg.de/_media/teaching/wintersemester_2010_2011/siw-2010-wiesner-versionsverwaltung-druckversion.pdf" target="_blank">https://wr.informatik.uni-hamburg.de/_media/teaching/wintersemester_2010_2011/siw-2010-wiesner-versionsverwaltung-druckversion.pdf</a>
 					</p>
 					<p>
-						<a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a>
+						<a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a>
 					</p>
 				</section>
 			</div>
