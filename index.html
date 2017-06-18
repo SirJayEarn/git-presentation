@@ -221,6 +221,7 @@
 						<p>git bietet alle Funktionalitäten von TFVC und darüber hinaus noch weitere</p>
 					</section>
 				</section>
+
 				<section>
 					<section data-background="#fff">
 						<h2 style="color: #000">Git Grundlagen</h2>
@@ -255,21 +256,38 @@
 						<img src="https://git-scm.com/images/about/workflow-a@2x.png" style="border: none;">
 						<small>Quelle: <a href="https://git-scm.com/images/about/workflow-a@2x.png">https://git-scm.com/images/about/workflow-a@2x.png</a></small>
 					</section>
-					<section>
-						<h2>LFS - large file system</h2>
+					<section data-background="#fff">
+						<h2 style="color: #000;">Hosted git</h2>
+						<a href="http://www.github.com" target="_blank">
+							<img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" style="border: none; box-shadow: none; width: 60%;">
+						</a>
+						<a href="http://www.bitbucket.org" target="_blank">
+							<img src="https://www.atlassian.com/dam/jcr:bd56917e-e361-4f03-b672-9f5ef5b06e80/bitbucket_rgb_slate.svg" style="border: none; box-shadow: none; background: none; width: 70%">
+						</a>
 					</section>
 					<section>
-						<h2>Hosted git - GitHub & Bitbucket</h2>
+						<h2>LFS - large file storage</h2>
+						<p>Kollaboration zwischen github und bitbucket</p>
+						<pre><code class="bash" style="word-warp: break-word;">git lfs install</code></pre>
+						<a href="https://git-lfs.github.com/" target="_blank">https://git-lfs.github.com/</a>
 					</section>
 				</section>
+
 				<section>
-					<section>
-						<h2>Branching - Das Git-Flow Modell</h2>
+					<section data-background="#fff">
+						<h2 style="color: #000;">Branching - Das Git-Flow Modell</h2>
 						<img src="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png" style="border: none;">
 						<small>Quelle: <a href="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png">https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png</a></small>
+						<aside class="notes">
+							Branching große stärke von git - daher sollte man es auch nutzen.
+							Master = standard branch bei neuem repo
+						</aside>
 					</section>
 					<section>
-						<h2></h2>
+						<h2>Von Vincent Driessen</h2>
+						<small><a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">http://nvie.com/posts/a-successful-git-branching-model/</a></small>
+					</section>
+					<section data-background-position="center" data-background-repeat="no-repeat" data-background-size="contain" data-background-image="http://nvie.com/img/git-model@2x.png" data-background="#fff">
 						<aside class="notes">
 							Screenshot zum modell
 						</aside>
@@ -304,61 +322,49 @@ git config --global user.name "Mein Name"
 						</aside>
 					</section>
 					<section>
-						<section>
-							<h2>Vorhandenes Repo auschecken</h2>
-						</section>
-						<section>
-							<h2>Clonen</h2>
-							<pre><code class="bash" style="word-warp: break-word;">git clone https://Yearn@bitbucket.org/Yearn/git-presentation.git</code></pre>
-						</section>
+						<h2>Vorhandenes Repo auschecken</h2>
+					</section>
+					<section>
+						<h2>Clonen</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git clone https://Yearn@bitbucket.org/Yearn/git-presentation.git</code></pre>
 					</section>
 
 					<section>
-						<section>
-							<h2>Eigenes Repo aufsetzen</h2>
-						</section>
-						<section>
-							<h2>Initialisieren</h2>
-							<pre><code class="bash" style="word-warp: break-word;">git init</code></pre>
-						</section>
-						<section>
-							<h2>konfigurieren (lokal)</h2>
-							<p>Globale Konfiguration wird übernommen, wenn keine lokale Konfiguration vorhanden</p>
-							<aside class="notes">
-								optionaler schritt, aber globale konfiguration muss vorhanden sein
-							</aside>
-						</section>
-						<section>
-							<h2>Push</h2>
-							<pre><code class="bash" style="word-warp: break-word;">git push -u origin master</code></pre>
-						</section>
+						<h2>Eigenes Repo aufsetzen</h2>
 					</section>
 					<section>
-						<section>
-							<h2>Status</h2>
-							<pre><code class="bash" style="word-warp: break-word;">git status</code></pre>
-						</section>
+						<h2>Initialisieren</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git init</code></pre>
 					</section>
 					<section>
-						<section>
-							<h2>Add</h2>
-							<pre><code class="bash" style="word-warp: break-word;">git add .</code></pre>
-						</section>
+						<h2>konfigurieren (lokal)</h2>
+						<p>Globale Konfiguration wird übernommen, wenn keine lokale Konfiguration vorhanden ist</p>
+						<aside class="notes">
+							optionaler schritt, aber globale konfiguration muss vorhanden sein
+						</aside>
 					</section>
 					<section>
-						<section>
-							<h2>Commit</h2>
-							<pre><code class="bash" style="word-warp: break-word;">git commit -m "commit message"</code></pre>
-						</section>
+						<h2>Push</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git push -u origin master</code></pre>
 					</section>
 					<section>
-						<section>
-							<h2>Branch commands</h2>
-							<pre><code class="bash" style="word-warp: break-word;">
-git checkout <branch>
-git checkout -b <branch>
-							</code></pre>
-						</section>
+						<h2>Status</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git status</code></pre>
+					</section>
+					<section>
+						<h2>Add</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git add .</code></pre>
+					</section>
+					<section>
+						<h2>Commit</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git commit -m "commit message"</code></pre>
+					</section>
+					<section>
+						<h2>Branch commands</h2>
+						<pre><code class="bash" style="word-warp: break-word;">
+git checkout [branch]
+git checkout -b [branch]
+						</code></pre>
 					</section>
 					<section>
 						<h2>Zusammenfassung - wichtigste commands</h2>
@@ -398,24 +404,15 @@ Here is the modified change.
 				</section>
 
 				<section>
-					<section>
-						<h2>Visuelle Git Clients</h2>
-						<p class="fragment">SourceTree</p>
-						<p class="fragment">GitKraken</p>
+					<section data-background="#fff">
+						<h2 style="color: #000">Visuelle Git Clients</h2>
+						<div>
+							<img src="https://static1.squarespace.com/static/512f7f28e4b0e0699d176018/t/532b2149e4b0e5f75511c4b4/1395335497756/" style="background: none; border: none; box-shadow: none; width: 48%; margin-top: 20px;">
+							<img src="https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-gitkraken-c292786ac0b639afcda0a4d8531869e87cde5e40e255fe8684b0a19add839edd.jpg" style="background: none; border: none; box-shadow: none; margin-top: 0;">
+						</div>
 						<aside class="notes">
-							Icons einfügen
-						</aside>
-					</section>
-					<section>
-						<h2>SourceTree</h2>
-						<aside class="notes">
-							Demo
-						</aside>
-					</section>
-					<section>
-						<h2>Git Kraken</h2>
-						<aside class="notes">
-							Demo
+							SourceTree demo:
+							GitKraken demo:
 						</aside>
 					</section>
 					<section data-background-video-loop="true" data-background-video="./media/gitkraken-merge.mp4" data-background-color="#000000">
@@ -425,11 +422,14 @@ Here is the modified change.
 					</section>
 				</section>
 
-
-				<section>
+				<!--<section>
 					<h2>Zugriff</h2>
 					<p>ssh</p>
 					<p>https</p>
+				</section>-->
+				<section>
+					<h2>Literatur</h2>
+					<a href="https://git-scm.com/book/en/v2">Pro Git von Scott Chancon</a>
 				</section>
 				<section>
 					<h2>Quellen</h2>
