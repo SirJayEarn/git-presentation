@@ -33,6 +33,7 @@
 					<ul>
 						<li data-fragment-index="1" class="fragment">Grundlagen vermitteln</li>
 						<li data-fragment-index="1" class="fragment">Helfen git schnell produktiv einsätzen zu können</li>
+						<li data-fragment-index="1" class="fragment">Mit TFVC vergleichen</li>
 					</ul>
 					<aside class="notes">
 						CLICK
@@ -68,7 +69,7 @@
 						</ul>
 
 						<aside class="notes">
-							Wozu Versionsverwaltung wichtig ist sollte klar sein. Allgemein Versionsverwaltung besonders für Textdateien geeignet.
+							Grundlagen der Versionsverwaltung sind wahrscheinlich klar, deshalb gehe ich nicht auf die Geschichte o.ä. ein. Es gibt 3 Arten. Beispiele [CLICK]
 							<ul>
 								<li>
 									lokal: Änderungsindex in der Datei selbst
@@ -96,6 +97,9 @@
 						</aside>
 					</section>
 					<section>
+						<h2>TODO: extra folien für verteilt und zentral</h2>
+					</section>
+					<section>
 						<h2>Das Problem</h2>
 						<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia2.png">
 						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
@@ -106,11 +110,18 @@
 							<li>Lock - Modify - Unlock</li>
 							<li>Copy - Modify - Merge</li>
 						</ul>
+						<aside class="notes">
+							Auch Lock - Modify - Write genannt.
+							Zwei Herangehensweisen dieses Problem zu lösen, die sich bewährt haben.
+						</aside>
 					</section>
 					<section>
 						<h2>Lock - Modify - Unlock</h2>
 						<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia3.png">
 						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+						<aside class="notes">
+							Umgehen des Problems. Aber problematisch beim gleichzeitigen Arbeiten.
+						</aside>
 					</section>
 					<section>
 						<h2>Copy - Modify - Merge</h2>
@@ -119,6 +130,9 @@
 							<img src="http://svnbook.red-bean.com/en/1.6/images/ch02dia5.png">
 						</div>
 						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
+						<aside class="notes">
+							Zunächst Datei lokal kopieren und dort ändern
+						</aside>
 					</section>
 					<section>
 						<h2>Vor- und Nachteile</h2>
@@ -133,7 +147,7 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Zusammenfassung</h2>
+						<h2>Gegenüberstellung</h2>
 						<ul>
 							<li>TFVC: zentral, Lock - Modify - Unlock oder Copy - Modify - Merge</li>
 							<li>GIT: dezentral, Copy - Modify - Merge</li>
@@ -148,6 +162,9 @@
 				<section>
 					<section>
 						<h2>Entstehungsgeschichte Git</h2>
+						<aside class="notes">
+							Nach Versionsverwaltung allgemein wieder zu git
+						</aside>
 					</section>
 					<section>
 						<h2>Entwicklung des Linux Kernels</h2>
@@ -170,6 +187,9 @@
 							<li>Vollständig verteilt</li>
 							<li>Fähig, große Projekte wie den Linux Kernel effektiv zu verwalten (Geschwindigkeit und Datenumfang)</li>
 						</ul>
+						<aside class="notes">
+							Monotone wurde in Betracht gezogen, hat aber den Ansprüchen nicht genügt.
+						</aside>
 					</section>
 					<section>
 						<h2>Namensherkunft</h2>
@@ -190,6 +210,9 @@
 							You can use TFVC repos with Git in the same Team Project so it's easy to add TFVC later if you need centralized version control.&rdquo;
 						</blockquote>
 						<small><a href="https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc" target="_blank">https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc</a></small>
+						<aside class="notes">
+							(link aufrufen): detaillierte Tabelle mit Vergleicht
+						</aside>
 					</section>
 					<section>
 						<h2>Git vs. TFVC</h2>
@@ -197,8 +220,10 @@
 					</section>
 					<section>
 						<h2>Hauptvorteile TFVC</h2>
-						<p>Besser um <strong>sehr viele</strong> oder <strong>sehr große</strong> Dateien zu verwalten</p>
-						<p>Einfacher Einstieg</p>
+						<ul>
+							<li>Besser um <strong>sehr viele</strong> oder <strong>sehr große</strong> Dateien zu verwalten</li>
+							<li>Einfacher Einstieg</li>
+						</ul>
 					</section>
 					<section>
 						<h2>Hauptvorteile git</h2>
@@ -213,6 +238,7 @@
 								<li>auch TFVC teilweise offlinefähig, aber dann keine branches etc.</li>
 								<li>nicht an repository gebunden</li>
 								<li>staging area - partielle commits</li>
+								<li>zu branches: experimentieren und Feature-Entwicklung unabhängig vom Rest</li>
 							</ul>
 						</aside>
 					</section>
@@ -227,6 +253,10 @@
 						<h2 style="color: #000">Git Grundlagen</h2>
 						<img src="https://git-scm.com/images/about/index1@2x.png" style="background-color: #fff; border: none; box-shadow: none;">
 						<small>Quelle: <a href="https://git-scm.com/images/about/index1@2x.png">https://git-scm.com</a></small>
+						<aside class="notes">
+							Alles lokal!
+							Wichtigster Unterschied zu anderen Versionsverwaltungen und essentiell um effektiv mit git arbeiten zu können
+						</aside>
 					</section>
 					<section>
 						<h2>Snapshots statt Differences</h2>
@@ -238,6 +268,7 @@
 						<aside class="notes">
 							<p>Andere Versionssysteme handhaben Änderungen als Liste von Dateibasierten Änderungen.</p>
 							<p>Git funktioniert wie ein mini-Dateisystem: Speichert den Zustand aller Dateien. Falls keine Änderungen referenz zur Datei</p>
+							<p>Dadurch sind in git mächtigere Operationen möglich, vereinfacht v.a. das mergen</p>
 						</aside>
 					</section>
 					<section>
@@ -253,8 +284,11 @@
 					<section>
 						<h2>Grundlegender Workflow</h2>
 						<p>Subversion style</p>
-						<img src="https://git-scm.com/images/about/workflow-a@2x.png" style="border: none;">
+						<img src="https://git-scm.com/images/about/workflow-a@2x.png" style="border: none; background: #fff;">
 						<small>Quelle: <a href="https://git-scm.com/images/about/workflow-a@2x.png">https://git-scm.com/images/about/workflow-a@2x.png</a></small>
+					</section>
+					<section>
+						<h2>TODO: auch andere workflows kurz zeigen</h2>
 					</section>
 					<section data-background="#fff">
 						<h2 style="color: #000;">Hosted git</h2>
@@ -264,12 +298,20 @@
 						<a href="http://www.bitbucket.org" target="_blank">
 							<img src="https://www.atlassian.com/dam/jcr:bd56917e-e361-4f03-b672-9f5ef5b06e80/bitbucket_rgb_slate.svg" style="border: none; box-shadow: none; background: none; width: 70%">
 						</a>
+						<aside class="notes">
+							(Seiten aufrufen)
+							<p>github eher für open source projekte</p>
+							<p>bitbucket m.E. besseres Preismodell für den privaten Gebrauch</p>
+						</aside>
 					</section>
 					<section>
 						<h2>LFS - large file storage</h2>
 						<p>Kollaboration zwischen github und bitbucket</p>
 						<pre><code class="bash" style="word-warp: break-word;">git lfs install</code></pre>
 						<a href="https://git-lfs.github.com/" target="_blank">https://git-lfs.github.com/</a>
+						<aside class="notes">
+							nicht nur konkurrenz, sondern treiben die Entwicklung von git auch gemeinsam voran
+						</aside>
 					</section>
 				</section>
 
