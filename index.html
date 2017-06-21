@@ -33,7 +33,7 @@
 					<ul>
 						<li data-fragment-index="1" class="fragment">Grundlagen vermitteln</li>
 						<li data-fragment-index="1" class="fragment">Helfen git schnell produktiv einsätzen zu können</li>
-						<li data-fragment-index="1" class="fragment">Mit TFVC vergleichen</li>
+						<li data-fragment-index="1" class="fragment">Mit TFVC vergleichen & evtl. Umstieg erleichtern</li>
 					</ul>
 					<aside class="notes">
 						CLICK
@@ -78,7 +78,7 @@
 									zentral: Ein Repository auf einem Server
 								</li>
 								<li>
-									dezentral: Ein Repository pro Entwickler
+									verteilt: Ein Repository pro Entwickler
 								</li>
 							</ul>
 
@@ -91,13 +91,20 @@
 									zentral: Wenn das Hauprepository zerstört wurde schwierig wiederherzustellen (die history kann im schlimmsten fall komplett verloren gehen)
 								</li>
 								<li>
-									dezentral: Wenn das Hauprepository zerstört wurde kann es einfach wiederhergestellt werden
+									verteilt: Wenn das Hauprepository zerstört wurde kann es einfach wiederhergestellt werden
 								</li>
 							</ul>
 						</aside>
 					</section>
 					<section>
-						<h2>TODO: extra folien für verteilt und zentral</h2>
+						<h2>Zentrale Versionsverwaltung</h2>
+						<img src="https://git-scm.com/book/en/v2/images/centralized.png" style="width: 60%">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control</a></small>
+					</section>
+					<section>
+						<h2>Verteilte Versionsverwaltung</h2>
+						<img src="https://git-scm.com/book/en/v2/images/distributed.png" style="width: 40%">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" target="_blank">https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control</a></small>
 					</section>
 					<section>
 						<h2>Das Problem</h2>
@@ -150,7 +157,7 @@
 						<h2>Gegenüberstellung</h2>
 						<ul>
 							<li>TFVC: zentral, Lock - Modify - Unlock oder Copy - Modify - Merge</li>
-							<li>GIT: dezentral, Copy - Modify - Merge</li>
+							<li>GIT: verteilt, Copy - Modify - Merge</li>
 						</ul>
 						<aside class="notes">
 							<p>TFS hat ein repository, Lock - Modify - Unlock kann optional eingeschaltet werden - offline arbeiten schwierig</p>
@@ -221,7 +228,7 @@
 					<section>
 						<h2>Hauptvorteile TFVC</h2>
 						<ul>
-							<li>Besser um <strong>sehr viele</strong> oder <strong>sehr große</strong> Dateien zu verwalten</li>
+							<li>Besser um <strong><u>sehr viele</u></strong> oder <strong><u>sehr große</u></strong> Dateien zu verwalten</li>
 							<li>Einfacher Einstieg</li>
 						</ul>
 					</section>
@@ -244,7 +251,7 @@
 					</section>
 					<section>
 						<h2>Fazit</h2>
-						<p>git bietet alle Funktionalitäten von TFVC und darüber hinaus noch weitere</p>
+						<p>git bietet alle Features von TFVC und darüber hinaus noch weitere</p>
 					</section>
 				</section>
 
@@ -313,16 +320,58 @@
 							nicht nur konkurrenz, sondern treiben die Entwicklung von git auch gemeinsam voran
 						</aside>
 					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000">Merging</h2>
+						<img src="https://git-scm.com/book/en/v2/images/basic-merging-1.png" style="background-color: #fff; border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com</a></small>
+						<aside class="notes">
+						</aside>
+					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000">Merge Commit</h2>
+						<img src="https://git-scm.com/book/en/v2/images/basic-merging-2.png" style="background-color: #fff; border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com</a></small>
+						<aside class="notes">
+						</aside>
+					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Branching</h2>
 						<p>Das "Killer Feature"</p>
+						<aside class="notes">
+							Da ein Branch in git nur eine Datei mit einer Referenz zu einem commit ist kaum Speicherverbrauch. Neuer branch = 41 bytes
+						</aside>
+					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000;">Commit History</h2>
+						<img src="https://git-scm.com/book/en/v2/images/branch-and-history.png" style="border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell</a></small>
+					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000;">Neuer Branch</h2>
+						<img src="https://git-scm.com/book/en/v2/images/head-to-master.png" style="border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell</a></small>
+					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000;">Branch wechseln</h2>
+						<img src="https://git-scm.com/book/en/v2/images/head-to-testing.png" style="border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell</a></small>
+					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000;">Neuer Commit im Branch</h2>
+						<img src="https://git-scm.com/book/en/v2/images/advance-testing.png" style="border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell</a></small>
+					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000;">Neuer Commit im Master-Branch</h2>
+						<img src="https://git-scm.com/book/en/v2/images/advance-master.png" style="border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell</a></small>
 					</section>
 					<section data-background="#fff">
 						<h2 style="color: #000;">Das Git-Flow Modell</h2>
-						<img src="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png" style="border: none;">
+						<img src="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png" style="border: none; box-shadow: none;">
 						<small>Quelle: <a href="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png">https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png</a></small>
 						<aside class="notes">
 							Branching große stärke von git - daher sollte man es auch nutzen.
@@ -500,7 +549,7 @@ Here is the modified change.
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				controls: true,
+				controls: false,
 				progress: true,
 				history: true,
 				center: true,
