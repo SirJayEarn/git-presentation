@@ -251,7 +251,10 @@
 					</section>
 					<section>
 						<h2>Fazit</h2>
-						<p>git bietet alle Features von TFVC und darüber hinaus noch weitere</p>
+						<p>GIT bietet alle Features von TFVC und darüber hinaus noch weitere</p>
+						<aside class="notes">
+							git höhere zwar Lernkurve, aber lohnt sich!
+						</aside>
 					</section>
 				</section>
 
@@ -292,7 +295,7 @@
 						<h2>Grundlegender Workflow</h2>
 						<p>Subversion style</p>
 						<img src="https://git-scm.com/images/about/workflow-a@2x.png" style="border: none; background: #fff;">
-						<small>Quelle: <a href="https://git-scm.com/images/about/workflow-a@2x.png">https://git-scm.com/images/about/workflow-a@2x.png</a></small>
+						<small>Quelle: <a href="https://git-scm.com">https://git-scm.com</a></small>
 						<aside class="notes">
 							auch andere workflows möglich - aber dieser wohl am relevantesten
 						</aside>
@@ -318,20 +321,6 @@
 						<a href="https://git-lfs.github.com/" target="_blank">https://git-lfs.github.com/</a>
 						<aside class="notes">
 							nicht nur konkurrenz, sondern treiben die Entwicklung von git auch gemeinsam voran
-						</aside>
-					</section>
-					<section data-background="#fff">
-						<h2 style="color: #000">Merging</h2>
-						<img src="https://git-scm.com/book/en/v2/images/basic-merging-1.png" style="background-color: #fff; border: none; box-shadow: none;">
-						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com</a></small>
-						<aside class="notes">
-						</aside>
-					</section>
-					<section data-background="#fff">
-						<h2 style="color: #000">Merge Commit</h2>
-						<img src="https://git-scm.com/book/en/v2/images/basic-merging-2.png" style="background-color: #fff; border: none; box-shadow: none;">
-						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com</a></small>
-						<aside class="notes">
 						</aside>
 					</section>
 				</section>
@@ -395,6 +384,20 @@
 						<p><small>Release</small></p>
 						<p><small>Hotfix</small></p>
 					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000">Merging</h2>
+						<img src="https://git-scm.com/book/en/v2/images/basic-merging-1.png" style="background-color: #fff; border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com</a></small>
+						<aside class="notes">
+						</aside>
+					</section>
+					<section data-background="#fff">
+						<h2 style="color: #000">Merge Commit</h2>
+						<img src="https://git-scm.com/book/en/v2/images/basic-merging-2.png" style="background-color: #fff; border: none; box-shadow: none;">
+						<small>Quelle: <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com</a></small>
+						<aside class="notes">
+						</aside>
+					</section>
 				</section>
 
 				<section>
@@ -422,6 +425,9 @@ git config --global user.name "Mein Name"
 					<section>
 						<h2>Clonen</h2>
 						<pre><code class="bash" style="word-warp: break-word;">git clone https://www.bitbucket.org/Yearn/git-presentation.git</code></pre>
+						<aside class="notes">
+							In Terminal ausführen!
+						</aside>
 					</section>
 
 					<section>
@@ -430,6 +436,9 @@ git config --global user.name "Mein Name"
 					<section>
 						<h2>Initialisieren</h2>
 						<pre><code class="bash" style="word-warp: break-word;">git init</code></pre>
+						<aside class="notes">
+							In Terminal ausführen!
+						</aside>
 					</section>
 					<section>
 						<h2>konfigurieren (lokal)</h2>
@@ -437,10 +446,6 @@ git config --global user.name "Mein Name"
 						<aside class="notes">
 							optionaler schritt, aber globale konfiguration muss vorhanden sein
 						</aside>
-					</section>
-					<section>
-						<h2>Push</h2>
-						<pre><code class="bash" style="word-warp: break-word;">git push -u origin master</code></pre>
 					</section>
 					<section>
 						<h2>Status</h2>
@@ -453,6 +458,14 @@ git config --global user.name "Mein Name"
 					<section>
 						<h2>Commit</h2>
 						<pre><code class="bash" style="word-warp: break-word;">git commit -m "commit message"</code></pre>
+					</section>
+					<section>
+						<h2>Commit</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git remote add origin <server></code></pre>
+					</section>
+					<section>
+						<h2>Push</h2>
+						<pre><code class="bash" style="word-warp: break-word;">git push -u origin master</code></pre>
 					</section>
 					<section>
 						<h2>Branch commands</h2>
