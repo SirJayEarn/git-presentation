@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 	<head>
-		<meta http-equiv="content-type" content="text/html" charset="charset=ISO-8859-1">
+		<meta http-equiv="content-type" content="text/html" charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>git Einführung</title>
+		<title>git Einf&uuml;hrung</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/moon.css">
@@ -32,7 +32,7 @@
 					<h2>Ziele dieser Pr&auml;sentation:</h2>
 					<ul>
 						<li data-fragment-index="1" class="fragment">Grundlagen vermitteln</li>
-						<li data-fragment-index="1" class="fragment">Helfen git schnell produktiv einsätzen zu können</li>
+						<li data-fragment-index="1" class="fragment">Helfen git schnell produktiv eins&auml;tzen zu k&ouml;nnen</li>
 						<li data-fragment-index="1" class="fragment">Mit TFVC vergleichen & evtl. Umstieg erleichtern</li>
 					</ul>
 					<aside class="notes">
@@ -69,10 +69,10 @@
 						</ul>
 
 						<aside class="notes">
-							Grundlagen der Versionsverwaltung sind wahrscheinlich klar, deshalb gehe ich nicht auf die Geschichte o.ä. ein. Es gibt 3 Arten. Beispiele [CLICK]
+							Grundlagen der Versionsverwaltung sind wahrscheinlich klar, deshalb gehe ich nicht auf die Geschichte o.&auml;. ein. Es gibt 3 Arten. Beispiele [CLICK]
 							<ul>
 								<li>
-									lokal: Änderungsindex in der Datei selbst
+									lokal: &auml;nderungsindex in der Datei selbst
 								</li>
 								<li>
 									zentral: Ein Repository auf einem Server
@@ -85,13 +85,13 @@
 							Vor- und Nachteile [CLICK] 
 							<ul>
 								<li>
-									lokal: nur an einem Arbeitsplatz möglich. Dadurch irrelevant für Softwareentwicklung im Team
+									lokal: nur an einem Arbeitsplatz m&ouml;glich. Dadurch irrelevant f&uuml;r Softwareentwicklung im Team
 								</li>
 								<li>
-									zentral: Wenn das Hauprepository zerstört wurde schwierig wiederherzustellen (die history kann im schlimmsten fall komplett verloren gehen)
+									zentral: Wenn das Hauprepository zerst&ouml;rt wurde schwierig wiederherzustellen (die history kann im schlimmsten fall komplett verloren gehen)
 								</li>
 								<li>
-									verteilt: Wenn das Hauprepository zerstört wurde kann es einfach wiederhergestellt werden
+									verteilt: Wenn das Hauprepository zerst&ouml;rt wurde kann es einfach wiederhergestellt werden
 								</li>
 							</ul>
 						</aside>
@@ -112,14 +112,14 @@
 						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
 					</section>
 					<section>
-						<h2>Lösungsansätze</h2>
+						<h2>L&ouml;sungsans&auml;tze</h2>
 						<ul>
 							<li>Lock - Modify - Unlock</li>
 							<li>Copy - Modify - Merge</li>
 						</ul>
 						<aside class="notes">
 							Auch Lock - Modify - Write genannt.
-							Zwei Herangehensweisen dieses Problem zu lösen, die sich bewährt haben.
+							Zwei Herangehensweisen dieses Problem zu l&ouml;sen, die sich bew&auml;hrt haben.
 						</aside>
 					</section>
 					<section>
@@ -138,7 +138,7 @@
 						</div>
 						<small>Quelle: <a href="http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html" target="_blank">http://svnbook.red-bean.com/en/1.6/svn.basic.version-control-basics.html</a></small>
 						<aside class="notes">
-							Zunächst Datei lokal kopieren und dort ändern
+							Zun&auml;chst Datei lokal kopieren und dort &auml;ndern
 						</aside>
 					</section>
 					<section>
@@ -149,12 +149,12 @@
 						<aside class="notes">
 							<ul>
 								<li>lock-modify-unlock: file locking kann bei der Zusammenarbeit hinderlich sein</li>
-								<li>copy-modify-merge: gut für zeilenbasierte Textdateien - schwierig bei binären Datein (Grafiken etc.)</li>
+								<li>copy-modify-merge: gut f&uuml;r zeilenbasierte Textdateien - schwierig bei bin&auml;ren Datein (Grafiken etc.)</li>
 							</ul>
 						</aside>
 					</section>
 					<section>
-						<h2>Gegenüberstellung</h2>
+						<h2>Gegen&uuml;berstellung</h2>
 						<ul>
 							<li>TFVC: zentral, Lock - Modify - Unlock oder Copy - Modify - Merge</li>
 							<li>GIT: verteilt, Copy - Modify - Merge</li>
@@ -176,9 +176,9 @@
 					<section>
 						<h2>Entwicklung des Linux Kernels</h2>
 						<ul>
-							<li>zunächst "manuelle" Versionsverwaltung</li>
+							<li>zun&auml;chst "manuelle" Versionsverwaltung</li>
 							<li>Ab 2002 wurde Bitkeeper verwendet</li>
-							<li>2005 Lizenzänderungen von Bitkeeper</li>
+							<li>2005 Lizenz&auml;nderungen von Bitkeeper</li>
 							<li>Linus Torvalds begann mit der Entwicklung eines eigenen Versionsverwaltungssystems</li>
 						</ul>
 						<aside class="notes">
@@ -190,19 +190,19 @@
 						<ul>
 							<li>Geschwindigkeit</li>
 							<li>Einfaches Design</li>
-							<li>Gute Unterstützung von nicht-linearer Entwicklung (tausende paralleler Branches, d.h. verschiedener Verzweigungen der Versionen)</li>
-							<li>Vollständig verteilt</li>
-							<li>Fähig, große Projekte wie den Linux Kernel effektiv zu verwalten (Geschwindigkeit und Datenumfang)</li>
+							<li>Gute Unterst&uuml;tzung von nicht-linearer Entwicklung (tausende paralleler Branches, d.h. verschiedener Verzweigungen der Versionen)</li>
+							<li>Vollst&auml;ndig verteilt</li>
+							<li>F&auml;hig, gro&szlige Projekte wie den Linux Kernel effektiv zu verwalten (Geschwindigkeit und Datenumfang)</li>
 						</ul>
 						<aside class="notes">
-							Monotone wurde in Betracht gezogen, hat aber den Ansprüchen nicht genügt.
+							Monotone wurde in Betracht gezogen, hat aber den Anspr&uuml;chen nicht gen&uuml;gt.
 						</aside>
 					</section>
 					<section>
 						<h2>Namensherkunft</h2>
-						<p>git engl. für Schwachkopf</p>
+						<p>git engl. f&uuml;r Schwachkopf</p>
 						<blockquote class="fragment" cite="https://www.visualstudio.com/en-us/docs/tfvc/comparison-git-tfvc">
-							&ldquo;I’m an egotistical bastard, and I name all my projects after myself. First ‘Linux’, now ‘Git’.&rdquo;<br/>
+							&ldquo;I'm an egotistical bastard, and I name all my projects after myself. First 'Linux', now 'Git'.&rdquo;<br/>
 							- Linus Torvalds
 						</blockquote>
 					</section>
@@ -223,37 +223,37 @@
 					</section>
 					<section>
 						<h2>Git vs. TFVC</h2>
-						<p>Sehr ähnliche Features</p>
+						<p>Sehr &auml;hnliche Features</p>
 					</section>
 					<section>
 						<h2>Hauptvorteile TFVC</h2>
 						<ul>
-							<li>Besser um <strong><u>sehr viele</u></strong> oder <strong><u>sehr große</u></strong> Dateien zu verwalten</li>
+							<li>Besser um <strong><u>sehr viele</u></strong> oder <strong><u>sehr gro&szlige</u></strong> Dateien zu verwalten</li>
 							<li>Einfacher Einstieg</li>
 						</ul>
 					</section>
 					<section>
 						<h2>Hauptvorteile git</h2>
 						<ul>
-							<li>vollständig offlinefähig (lokale History)</li>
+							<li>vollst&auml;ndig offlinef&auml;hig (lokale History)</li>
 							<li>"automatische Backups"</li>
 							<li>kostenlos und open source</li>
 							<li><strong>Branching</strong></li>
 						</ul>
 						<aside class="notes">
 							<ul>
-								<li>auch TFVC teilweise offlinefähig, aber dann keine branches etc.</li>
+								<li>auch TFVC teilweise offlinef&auml;hig, aber dann keine branches etc.</li>
 								<li>nicht an repository gebunden</li>
 								<li>staging area - partielle commits</li>
-								<li>zu branches: experimentieren und Feature-Entwicklung unabhängig vom Rest</li>
+								<li>zu branches: experimentieren und Feature-Entwicklung unabh&auml;ngig vom Rest</li>
 							</ul>
 						</aside>
 					</section>
 					<section>
 						<h2>Fazit</h2>
-						<p>GIT bietet alle Features von TFVC und darüber hinaus noch weitere</p>
+						<p>GIT bietet alle Features von TFVC und dar&uuml;ber hinaus noch weitere</p>
 						<aside class="notes">
-							git höhere zwar Lernkurve, aber lohnt sich!
+							git h&ouml;here zwar Lernkurve, aber lohnt sich!
 						</aside>
 					</section>
 				</section>
@@ -265,7 +265,7 @@
 						<small>Quelle: <a href="https://git-scm.com/images/about/index1@2x.png">https://git-scm.com</a></small>
 						<aside class="notes">
 							Alles lokal!
-							Wichtigster Unterschied zu anderen Versionsverwaltungen und essentiell um effektiv mit git arbeiten zu können
+							Wichtigster Unterschied zu anderen Versionsverwaltungen und essentiell um effektiv mit git arbeiten zu k&ouml;nnen
 						</aside>
 					</section>
 					<section>
@@ -276,13 +276,13 @@
 						</div>
 						<small>Quelle: <a href="https://git-scm.com">https://git-scm.com</a></small>
 						<aside class="notes">
-							<p>Andere Versionssysteme handhaben Änderungen als Liste von Dateibasierten Änderungen.</p>
-							<p>Git funktioniert wie ein mini-Dateisystem: Speichert den Zustand aller Dateien. Falls keine Änderungen referenz zur Datei</p>
-							<p>Dadurch sind in git mächtigere Operationen möglich, vereinfacht v.a. das mergen</p>
+							<p>Andere Versionssysteme handhaben &auml;nderungen als Liste von Dateibasierten &auml;nderungen.</p>
+							<p>Git funktioniert wie ein mini-Dateisystem: Speichert den Zustand aller Dateien. Falls keine &auml;nderungen referenz zur Datei</p>
+							<p>Dadurch sind in git m&auml;chtigere Operationen m&ouml;glich, vereinfacht v.a. das mergen</p>
 						</aside>
 					</section>
 					<section>
-						<h2>Die 3 Zustände</h2>
+						<h2>Die 3 Zust&auml;nde</h2>
 						<img src="https://git-scm.com/book/en/v2/images/areas.png">
 						<small>Quelle: <a href="https://git-scm.com">https://git-scm.com</a></small>
 					</section>
@@ -297,7 +297,7 @@
 						<img src="https://git-scm.com/images/about/workflow-a@2x.png" style="border: none; background: #fff;">
 						<small>Quelle: <a href="https://git-scm.com">https://git-scm.com</a></small>
 						<aside class="notes">
-							auch andere workflows möglich - aber dieser wohl am relevantesten
+							auch andere workflows m&ouml;glich - aber dieser wohl am relevantesten
 						</aside>
 					</section>
 					<section data-background="#fff">
@@ -310,8 +310,8 @@
 						</a>
 						<aside class="notes">
 							(Seiten aufrufen)
-							<p>github eher für open source projekte</p>
-							<p>bitbucket m.E. besseres Preismodell für den privaten Gebrauch</p>
+							<p>github eher f&uuml;r open source projekte</p>
+							<p>bitbucket m.E. besseres Preismodell f&uuml;r den privaten Gebrauch</p>
 						</aside>
 					</section>
 					<section>
@@ -363,7 +363,7 @@
 						<img src="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png" style="border: none; box-shadow: none;">
 						<small>Quelle: <a href="https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png">https://leanpub.com/site_images/git-flow/git-workflow-release-cycle-4maintenance.png</a></small>
 						<aside class="notes">
-							Branching große stärke von git - daher sollte man es auch nutzen.
+							Branching gro&szlige st&auml;rke von git - daher sollte man es auch nutzen.
 							Master = standard branch bei neuem repo
 						</aside>
 					</section>
@@ -403,7 +403,7 @@
 				<section>
 					<section>
 						<h2>Hands on</h2>
-						<p>manuell - über Terminal</p>
+						<p>manuell - &uuml;ber Terminal</p>
 					</section>
 					<section>
 						<h2>Installieren</h2>
@@ -424,9 +424,11 @@ git config --global user.name "Mein Name"
 					</section>
 					<section>
 						<h2>Clonen</h2>
-						<pre><code class="bash" style="word-warp: break-word;">git clone https://www.bitbucket.org/Yearn/git-presentation.git</code></pre>
+						<pre><code class="bash" style="word-warp: break-word;">git clone https://bitbucket.org/Yearn/git-presentation.git</code></pre>
+						<p>oder</p>
+						<pre><code class="bash" style="word-warp: break-word;">git clone https://github.com/SirJayEarn/git-presentation.git</code></pre>
 						<aside class="notes">
-							In Terminal ausführen!
+							In Terminal ausf&uuml;hren!
 						</aside>
 					</section>
 
@@ -437,12 +439,12 @@ git config --global user.name "Mein Name"
 						<h2>Initialisieren</h2>
 						<pre><code class="bash" style="word-warp: break-word;">git init</code></pre>
 						<aside class="notes">
-							In Terminal ausführen!
+							In Terminal ausf&uuml;hren!
 						</aside>
 					</section>
 					<section>
 						<h2>konfigurieren (lokal)</h2>
-						<p>Globale Konfiguration wird übernommen, wenn keine lokale Konfiguration vorhanden ist</p>
+						<p>Globale Konfiguration wird &uuml;bernommen, wenn keine lokale Konfiguration vorhanden ist</p>
 						<aside class="notes">
 							optionaler schritt, aber globale konfiguration muss vorhanden sein
 						</aside>
@@ -526,7 +528,7 @@ Here is the modified change.
 					</section>
 					<section data-background-video-loop="true" data-background-video="./media/gitkraken-merge.mp4" data-background-color="#000000">
 						<aside class="notes">
-							Fazit: man kann auf visuelle Clients zurückgreifen. Wichtig ist dass man Branching und git flow versteht. Und dass alle operationen zunächst lokal sind und dann erst noch gepusht werden müssen.
+							Fazit: man kann auf visuelle Clients zur&uuml;ckgreifen. Wichtig ist dass man Branching und git flow versteht. Und dass alle operationen zun&auml;chst lokal sind und dann erst noch gepusht werden m&uuml;ssen.
 						</aside>
 						<!--<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 4px;">
 							<a href="https://www.youtube.com/watch?v=R1iWJNyRpQE">https://www.youtube.com/watch?v=R1iWJNyRpQE</a>
